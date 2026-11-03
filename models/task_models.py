@@ -1,7 +1,9 @@
+import uuid
+
 from pydantic import BaseModel
 
 class Task(BaseModel):
-    id: int
+    id: uuid.UUID
     title: str
     description: str | None = None
     is_completed: bool = False
