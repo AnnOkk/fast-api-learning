@@ -11,3 +11,4 @@ class Task(BaseModel):
 class TaskDTO(BaseModel):
     title: str
     description: str | None = None
+    is_completed: bool = False
