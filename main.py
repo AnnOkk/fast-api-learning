@@ -19,7 +19,7 @@ def get_task(task_id: uuid.UUID):
     for task in tasks_db:
         if task.id == task_id:
             return task
-    return HTTPException(status_code=404, detail="Task not found")
+    raise HTTPException(status_code=404, detail="Task not found")
 
 @app.get("/tasks")
 def get_tasks(skip: int = 0, limit: int = 10):
